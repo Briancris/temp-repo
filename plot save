@@ -1,0 +1,11 @@
+
+# Plotting and saving plot
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from pylab import savefig
+import seaborn as sns
+df = pd.read_csv('../DATA/heart.csv')
+plt.figure(figsize=(10,10))
+t = sns.countplot(x="sex",data=df)
+savefig("brian graph.png")
